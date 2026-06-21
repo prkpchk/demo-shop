@@ -2,6 +2,10 @@
 
 A demo e-commerce REST API and React frontend built for QA automation training. Covers a complete shopping flow: registration → browse products → cart → place order → pay (with success/failure simulation) → Kafka events.
 
+![img.png](screenshots/img.png)
+
+![img_1.png](screenshots/img_1.png)
+
 ## Stack
 
 - **Backend:** Spring Boot 3.3, Java 21, PostgreSQL, Kafka, JWT auth, Flyway migrations
