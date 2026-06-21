@@ -14,6 +14,25 @@ A demo e-commerce REST API and React frontend built for QA automation training. 
 
 ## Quick Start
 
+### Option 1 — Pull from Docker Hub (no build required)
+
+```bash
+curl -O https://raw.githubusercontent.com/prkpchk/demo-shop/main/docker-compose.hub.yml
+docker-compose -f docker-compose.hub.yml up
+```
+
+Or if you already have the repo:
+
+```bash
+docker-compose -f docker-compose.hub.yml up
+```
+
+Images used:
+- [`prkpchk/demo-shop-api`](https://hub.docker.com/r/prkpchk/demo-shop-api)
+- [`prkpchk/demo-shop-frontend`](https://hub.docker.com/r/prkpchk/demo-shop-frontend)
+
+### Option 2 — Build from source
+
 ```bash
 docker-compose up --build
 ```
@@ -153,5 +172,6 @@ demo-shop/
 │   ├── nginx.conf
 │   └── Dockerfile
 ├── Dockerfile                  # Backend multi-stage build
-└── docker-compose.yml          # 4 services: postgres, kafka, app, frontend
+├── docker-compose.yml          # build from source: postgres, kafka, app, frontend
+└── docker-compose.hub.yml      # pull from Docker Hub (no build needed)
 ```
